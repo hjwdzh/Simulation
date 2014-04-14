@@ -9,19 +9,14 @@
 #ifndef __simulation__Springs__
 #define __simulation__Springs__
 
-#include <iostream>
-#include <Particles.h>
+#include "Particles.h"
 
 class Spring
 {
 public:
     Particle *p1, *p2;
     double r;
-    void Display()
-    {
-        glVertex3d(p1->x[0], p1->x[1], p1->x[2]);
-        glVertex3d(p2->x[0], p2->x[1], p2->x[2]);
-    }
+    void Display();
     void ForceApply(double ks, double kd);
 };
 

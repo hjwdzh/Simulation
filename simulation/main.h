@@ -6,13 +6,25 @@
 //  Copyright (c) 2014年 skyer. All rights reserved.
 //
 
+#define _WINDOWS_PLATFORM_
+
 #ifndef __simulation__main__
 #define __simulation__main__
 
 #include <iostream>
+using namespace std;
+#ifndef _WINDOWS_PLATFORM_
 #include <OpenGL/gl.h>
 #include <OpengL/glu.h>
 #include <GLUT/glut.h>
+#else
+#pragma comment( linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"" )
+#include <Windows.h>
+#include "gl.h"
+#include "glu.h"
+#include "glut.h"
+#endif
+
 #include "SysDynPtc.h"
 #include "Camera.h"
 using namespace std;

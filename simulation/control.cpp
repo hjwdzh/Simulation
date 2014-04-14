@@ -10,6 +10,9 @@ void KeyboardFunc(unsigned char key, int x, int y)
 {
     switch (key)
     {
+		case 27:
+			exit(0);
+			break;
         case 'A':
             g_camera->Rotate(0, -5);
             break;

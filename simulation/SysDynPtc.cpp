@@ -8,9 +8,7 @@
 
 #include "SysDynPtc.h"
 #include "ForceField.h"
-#include <OpenGL/gl.h>
-#include <OpenGL/glu.h>
-#include <GLUT/glut.h>
+#include "main.h"
 
 SysDynPtc::SysDynPtc()
 {}

@@ -15,7 +15,6 @@
 
 class Plane : public Geometric
 {
-    private
 };
 
 #endif /* defined(__simulation__Plane__) */

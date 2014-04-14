@@ -5,8 +5,7 @@
 //  Created by skyer on 14-4-13.
 //  Copyright (c) 2014年 skyer. All rights reserved.
 //
-
-#include "Springs.h"
+#include "main.h"
 
 Springs::Springs()
 {}
@@ -69,4 +68,10 @@ void Spring::ForceApply(double ks, double kd)
     }
     p1->ExcertForce(f1);
     p2->ExcertForce(f2);
+}
+
+void Spring::Display()
+{
+	glVertex3d(p1->x[0], p1->x[1], p1->x[2]);
+	glVertex3d(p2->x[0], p2->x[1], p2->x[2]);
 }

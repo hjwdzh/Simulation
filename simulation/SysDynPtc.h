@@ -9,8 +9,7 @@
 #ifndef __simulation__SysDynPtc__
 #define __simulation__SysDynPtc__
 
-#include <iostream>
-#include <Springs.h>
+#include "Springs.h"
 #include "SystemPhy.h"
 
 class SysDynPtc: public SystemPhy

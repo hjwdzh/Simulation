@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{0689949f-49f2-4454-807f-46babbc41f8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User">
+      <UniqueIdentifier>{82ab56b6-f106-42df-a519-d7ee459f37d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithm">
+      <UniqueIdentifier>{cc65bfff-065a-45bb-ad94-cd6fad4c20a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Geometrics">
+      <UniqueIdentifier>{9a181060-6bce-4ede-a246-ffb814b97c33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenGL">
+      <UniqueIdentifier>{b3878610-aef8-46de-88a9-b98f92e80959}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems">
+      <UniqueIdentifier>{288ae573-c6e8-4bf9-abd4-587a1fde43d9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="vmath.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="control.cpp">
+      <Filter>User</Filter>
+    </ClCompile>
+    <ClCompile Include="display.cpp">
+      <Filter>User</Filter>
+    </ClCompile>
+    <ClCompile Include="scene.cpp">
+      <Filter>User</Filter>
+    </ClCompile>
+    <ClCompile Include="ForceField.cpp">
+      <Filter>Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Solver.cpp">
+      <Filter>Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometric.cpp">
+      <Filter>Geometrics</Filter>
+    </ClCompile>
+    <ClCompile Include="Particles.cpp">
+      <Filter>Geometrics</Filter>
+    </ClCompile>
+    <ClCompile Include="Plane.cpp">
+      <Filter>Geometrics</Filter>
+    </ClCompile>
+    <ClCompile Include="Springs.cpp">
+      <Filter>Geometrics</Filter>
+    </ClCompile>
+    <ClCompile Include="SysDynPtc.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemPhy.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="vmath.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ForceField.h">
+      <Filter>Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Solver.h">
+      <Filter>Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometric.h">
+      <Filter>Geometrics</Filter>
+    </ClInclude>
+    <ClInclude Include="Particles.h">
+      <Filter>Geometrics</Filter>
+    </ClInclude>
+    <ClInclude Include="Plane.h">
+      <Filter>Geometrics</Filter>
+    </ClInclude>
+    <ClInclude Include="Springs.h">
+      <Filter>Geometrics</Filter>
+    </ClInclude>
+    <ClInclude Include="GL.H">
+      <Filter>OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="GLU.H">
+      <Filter>OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="glut.h">
+      <Filter>OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemPhy.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="SysDynPtc.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

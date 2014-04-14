@@ -8,12 +8,10 @@
 
 #ifndef __simulation__Particles__
 #define __simulation__Particles__
-
 #include <iostream>
 #include <vector>
-#include <OpenGL/gl.h>
-#include <OpenGL/glu.h>
-#include <GLUT/glut.h>
+using namespace std;
+
 #include "Geometric.h"
 using namespace std;
 

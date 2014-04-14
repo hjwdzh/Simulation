@@ -473,7 +473,7 @@ public:
 	 */
 	T length() const
 	{
-		return (T) std::sqrt(x * x + y * y);
+		return (T) std::sqrt(0.0 + x * x + y * y);
 	}
 
 	/**
@@ -939,7 +939,7 @@ public:
 	 */
 	bool operator==(const Vector3<T>& rhs) const
 	{
-		return std::fabs(x - rhs.x) < EPSILON && std::fabs(y - rhs.y) < EPSILON && std::fabs(z - rhs.z) < EPSILON;
+		return std::fabs(0.0 + 0.0 + x - rhs.x) < EPSILON && std::fabs(0.0 + 0.0 + y - rhs.y) < EPSILON && std::fabs(0.0 + 0.0 + z - rhs.z) < EPSILON;
 	}
 
 	/**
@@ -969,7 +969,7 @@ public:
 	 */
 	T length() const
 	{
-		return (T) std::sqrt(x * x + y * y + z * z);
+		return (T) std::sqrt(0.0 + x * x + y * y + z * z);
 	}
 
 	/**
@@ -1004,12 +1004,12 @@ public:
 	 */
 	void rotate(T ax, T ay, T az)
 	{
-		T a = cos(DEG2RAD(ax));
-		T b = sin(DEG2RAD(ax));
-		T c = cos(DEG2RAD(ay));
-		T d = sin(DEG2RAD(ay));
-		T e = cos(DEG2RAD(az));
-		T f = sin(DEG2RAD(az));
+		T a = cos(0.0 + DEG2RAD(ax));
+		T b = sin(0.0 + DEG2RAD(ax));
+		T c = cos(0.0 + DEG2RAD(ay));
+		T d = sin(0.0 + DEG2RAD(ay));
+		T e = cos(0.0 + DEG2RAD(az));
+		T f = sin(0.0 + DEG2RAD(az));
 		T nx = c * e * x - c * f * y + d * z;
 		T ny = (a * f + b * d * e) * x + (a * e - b * d * f) * y - b * c * z;
 		T nz = (b * f - a * d * e) * x + (a * d * f + b * e) * y + a * c * z;
@@ -1363,8 +1363,8 @@ public:
 	 */
 	bool operator==(const Vector4<T>& rhs) const
 	{
-		return std::fabs(x - rhs.x) < EPSILON && std::fabs(y - rhs.y) < EPSILON && std::fabs(z - rhs.z) < EPSILON
-				&& std::fabs(w - rhs.w) < EPSILON;
+		return std::fabs(0.0 + x - rhs.x) < EPSILON && std::fabs(0.0 + y - rhs.y) < EPSILON && std::fabs(0.0 + z - rhs.z) < EPSILON
+				&& std::fabs(0.0 + w - rhs.w) < EPSILON;
 	}
 
 	/**
@@ -1484,7 +1484,7 @@ public:
 	 */
 	T length() const
 	{
-		return (T) std::sqrt(x * x + y * y + z * z + w * w);
+		return (T) std::sqrt(0.0 + x * x + y * y + z * z + w * w);
 	}
 
 	/**
@@ -1656,12 +1656,12 @@ public:
 		T zRads(DEG2RAD(zDeg));
 
 		Matrix3<T> ma, mb, mc;
-		float ac = cos(xRads);
-		float as = sin(xRads);
-		float bc = cos(yRads);
-		float bs = sin(yRads);
-		float cc = cos(zRads);
-		float cs = sin(zRads);
+		float ac = cos(0.0 + xRads);
+		float as = sin(0.0 + xRads);
+		float bc = cos(0.0 + yRads);
+		float bs = sin(0.0 + yRads);
+		float cc = cos(0.0 + zRads);
+		float cs = sin(0.0 + zRads);
 
 		ma.at(1, 1) = ac;
 		ma.at(2, 1) = as;
@@ -1746,7 +1746,7 @@ public:
 	{
 		for (int i = 0; i < 9; i++)
 		{
-			if (std::fabs(data[i] - rhs.data[i]) >= EPSILON)
+			if (std::fabs(0.0 + data[i] - rhs.data[i]) >= EPSILON)
 				return false;
 		}
 		return true;
@@ -2152,12 +2152,12 @@ public:
 		T zRads(DEG2RAD(zDeg));
 
 		Matrix4<T> ma, mb, mc;
-		float ac = cos(xRads);
-		float as = sin(xRads);
-		float bc = cos(yRads);
-		float bs = sin(yRads);
-		float cc = cos(zRads);
-		float cs = sin(zRads);
+		float ac = cos(0.0 + xRads);
+		float as = sin(0.0 + xRads);
+		float bc = cos(0.0 + yRads);
+		float bs = sin(0.0 + yRads);
+		float cc = cos(0.0 + zRads);
+		float cs = sin(0.0 + zRads);
 
 		ma.at(1, 1) = ac;
 		ma.at(2, 1) = as;
@@ -2408,7 +2408,7 @@ public:
 	{
 		for (int i = 0; i < 16; i++)
 		{
-			if (std::fabs(data[i] - rhs.data[i]) >= EPSILON
+			if (std::fabs(0.0 + data[i] - rhs.data[i]) >= EPSILON
 				)
 				return false;
 		}
@@ -3038,7 +3038,7 @@ public:
 	bool operator==(const Quaternion<T>& rhs) const
 	{
 		const Quaternion<T>& lhs = *this;
-		return (std::fabs(lhs.w - rhs.w) < EPSILON) && lhs.v == rhs.v;
+		return (std::fabs(0.0 + lhs.w - rhs.w) < EPSILON) && lhs.v == rhs.v;
 	}
 
 	/**
@@ -3123,8 +3123,8 @@ public:
 	static Quaternion<T> fromAxisRot(Vector3<T> axis, float angleDeg)
 	{
 		double angleRad = DEG2RAD(angleDeg);
-		double sa2 = std::sin(angleRad / 2);
-		double ca2 = std::cos(angleRad / 2);
+		double sa2 = std::sin(0.0 + angleRad / 2);
+		double ca2 = std::cos(0.0 + angleRad / 2);
 		return Quaternion<T>(ca2, axis * sa2);
 	}
 
@@ -3383,23 +3383,23 @@ public:
 	{
 		Quaternion<T> ret;
 		T cosTheta = w * q2.w + v.x * q2.v.x + v.y * q2.v.y + v.z * q2.v.z;
-		T theta = (T) acos(cosTheta);
-		if (fabs(theta) < epsilon)
+		T theta = (T) acos(0.0 + cosTheta);
+		if (fabs(0.0 + theta) < epsilon)
 		{
 			ret = *this;
 		}
 		else
 		{
 			T sinTheta = (T) sqrt(1.0 - cosTheta * cosTheta);
-			if (fabs(sinTheta) < epsilon)
+			if (fabs(0.0 + sinTheta) < epsilon)
 			{
 				ret.w = 0.5 * w + 0.5 * q2.w;
 				ret.v = v.lerp(0.5, q2.v);
 			}
 			else
 			{
-				T rA = (T) sin((1.0 - r) * theta) / sinTheta;
-				T rB = (T) sin(r * theta) / sinTheta;
+				T rA = (T) sin(0.0 + (1.0 - r) * theta) / sinTheta;
+				T rB = (T) sin(0.0 + r * theta) / sinTheta;
 
 				ret.w = w * rA + q2.w * rB;
 				ret.v.x = v.x * rA + q2.v.x * rB;

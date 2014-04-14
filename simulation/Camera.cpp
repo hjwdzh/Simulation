@@ -7,7 +7,9 @@
 //
 
 #include "Camera.h"
-#include <OpenGL/glu.h>
+#include "main.h"
+
+
 #define PI 3.141592654
 Camera::Camera()
     : dir(Vector3d(0, 0, -1)), up(Vector3d(0, 1, 0))
