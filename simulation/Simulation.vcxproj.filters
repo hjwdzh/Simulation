@@ -27,6 +27,9 @@
     <Filter Include="Systems">
       <UniqueIdentifier>{288ae573-c6e8-4bf9-abd4-587a1fde43d9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Bounds">
+      <UniqueIdentifier>{0076c9d1-a277-4ab1-adc7-941c5e716d9b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -56,20 +59,32 @@
     <ClCompile Include="Geometric.cpp">
       <Filter>Geometrics</Filter>
     </ClCompile>
-    <ClCompile Include="Particles.cpp">
-      <Filter>Geometrics</Filter>
-    </ClCompile>
-    <ClCompile Include="Plane.cpp">
-      <Filter>Geometrics</Filter>
-    </ClCompile>
-    <ClCompile Include="Springs.cpp">
-      <Filter>Geometrics</Filter>
-    </ClCompile>
     <ClCompile Include="SysDynPtc.cpp">
       <Filter>Systems</Filter>
     </ClCompile>
     <ClCompile Include="SystemPhy.cpp">
       <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Particle.cpp">
+      <Filter>Geometrics</Filter>
+    </ClCompile>
+    <ClCompile Include="Plane.cpp">
+      <Filter>Bounds</Filter>
+    </ClCompile>
+    <ClCompile Include="Springs.cpp">
+      <Filter>Bounds</Filter>
+    </ClCompile>
+    <ClCompile Include="Bound.cpp">
+      <Filter>Bounds</Filter>
+    </ClCompile>
+    <ClCompile Include="Bounds.cpp">
+      <Filter>Bounds</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometrics.cpp">
+      <Filter>Geometrics</Filter>
+    </ClCompile>
+    <ClCompile Include="Spring.cpp">
+      <Filter>Bounds</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -91,15 +106,6 @@
     <ClInclude Include="Geometric.h">
       <Filter>Geometrics</Filter>
     </ClInclude>
-    <ClInclude Include="Particles.h">
-      <Filter>Geometrics</Filter>
-    </ClInclude>
-    <ClInclude Include="Plane.h">
-      <Filter>Geometrics</Filter>
-    </ClInclude>
-    <ClInclude Include="Springs.h">
-      <Filter>Geometrics</Filter>
-    </ClInclude>
     <ClInclude Include="GL.H">
       <Filter>OpenGL</Filter>
     </ClInclude>
@@ -114,6 +120,27 @@
     </ClInclude>
     <ClInclude Include="SysDynPtc.h">
       <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle.h">
+      <Filter>Geometrics</Filter>
+    </ClInclude>
+    <ClInclude Include="Springs.h">
+      <Filter>Bounds</Filter>
+    </ClInclude>
+    <ClInclude Include="Plane.h">
+      <Filter>Bounds</Filter>
+    </ClInclude>
+    <ClInclude Include="Bounds.h">
+      <Filter>Bounds</Filter>
+    </ClInclude>
+    <ClInclude Include="Bound.h">
+      <Filter>Bounds</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometrics.h">
+      <Filter>Geometrics</Filter>
+    </ClInclude>
+    <ClInclude Include="Spring.h">
+      <Filter>Bounds</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
