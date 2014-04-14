@@ -1,0 +1,20 @@
+The project is a simulation platform.
+It is used for practice and research.
+
+Functionality:
+
+Press 'wsadqe' to slightly rotate camera.
+Press 'WSADQE' to rotate camera in course level.
+
+Press 'rf' and 'RF' to move camera forward or backward.
+
+Use mouse click to select particle. Drag the particle to exert force.
+When the mouse is released, the external force given by user is disappeared.
+
+Display:
+
+Green sphere --> Particle
+Pink sphere  --> Selected particle
+Golden line  --> Spring
+Red line     --> External force
+White line   --> External force given by user
