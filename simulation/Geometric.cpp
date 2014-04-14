@@ -9,7 +9,10 @@
 #include "Geometric.h"
 
 Geometric::Geometric()
-: selected(false), nailed(false)
+: selected(false), nailed(false), kr(1)
+{}
+
+Geometric::~Geometric()
 {}
 
 void Geometric::setExtForce(const Vector3d &ext)
@@ -42,5 +45,10 @@ void Geometric::setNailed()
 void Geometric::setUserForce(const Vector3d& v)
 {
     userForce = v;
+}
+
+void Geometric::setKr(double _kr)
+{
+    kr = _kr;
 }
 

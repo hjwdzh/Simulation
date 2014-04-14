@@ -128,7 +128,7 @@ void Animate(int id)
         double hitY = v[1];
         v = Vector4d(mouseX - hitX, mouseY - hitY, 0, 0);
         v = g_camera->lookat.inverse() * v;
-        g_selectedObject->setUserForce(Vector3d(v[0], v[1], v[2]));
+        g_selectedObject->setUserForce(Vector3d(v[0], v[1], v[2]) * 5);
     }
     Solver::EulersStep(*g_sys, 0.03);
     glutTimerFunc(33, Animate, 1);

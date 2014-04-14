@@ -12,7 +12,7 @@
 
 #define PI 3.141592654
 Camera::Camera()
-    : dir(Vector3d(0, 0, -1)), up(Vector3d(0, 1, 0))
+    : o(Vector3d(0, 2, 0)),dir(Vector3d(0, 0, -1)), up(Vector3d(0, 1, 0))
 {}
 
 void Camera::Move(const double dis)

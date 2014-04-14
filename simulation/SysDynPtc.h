@@ -10,6 +10,8 @@
 #define __simulation__SysDynPtc__
 
 #include "Springs.h"
+#include "Geometrics.h"
+#include "Plane.h"
 #include "SystemPhy.h"
 
 class SysDynPtc: public SystemPhy
@@ -32,7 +34,8 @@ protected:
     virtual void clearForce();
     virtual void ForceApply();
     Springs m_springs;
-    Particles m_particles;
+    Geometrics m_objects;
+    Bounds m_bounds;
     double time;
     double ks, kd;
 };

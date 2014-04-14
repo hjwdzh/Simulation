@@ -11,7 +11,7 @@
 
 #include <iostream>
 
-#include "Particles.h"
+#include "Particle.h"
 
 class ForceField
 {

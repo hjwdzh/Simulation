@@ -10,25 +10,30 @@
 #define __simulation__Geometric__
 
 #include <iostream>
+#include "Geometric.h"
 #include "vmath.h"
 
 class Geometric
 {
 public:
     Geometric();
-
+    virtual ~Geometric() = 0;
     virtual void setSelected(bool selected);
     virtual void setNailed();
     virtual void setExtForce(const Vector3d& ext);
     virtual void clearForce();
     virtual void setUserForce(const Vector3d& v);
-    
-    double mass;
+    virtual void setKr(double _kr);
+    virtual double getMouseDepth(double mouseX, double mouseY) = 0;
+    virtual void Display() = 0;
+    virtual void ExcertForce(const Vector3d& force) = 0;
+    virtual void ExcertForceField(Vector3d (*forcefunc)(Geometric*)) = 0;
+
+    double mass, kr;
     bool selected, nailed;
     Vector3d x, v, f, extForce, userForce;
-
-    virtual void ExcertForce(const Vector3d& force) = 0;
-    void ExcertForceField(Vector3d (*forcefunc)(Geometric*));
+    
 };
+
 
 #endif /* defined(__simulation__Geometric__) */

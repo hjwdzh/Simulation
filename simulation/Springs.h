@@ -9,16 +9,9 @@
 #ifndef __simulation__Springs__
 #define __simulation__Springs__
 
-#include "Particles.h"
-
-class Spring
-{
-public:
-    Particle *p1, *p2;
-    double r;
-    void Display();
-    void ForceApply(double ks, double kd);
-};
+#include "Spring.h"
+#include <vector>
+using namespace std;
 
 class Springs
 {
@@ -30,7 +23,7 @@ public:
     void Display();
     
     void ForceApply(double ks, double kd);
-    void addElement(Particle& p1, Particle& p2);
+    void addElement(Geometric* p1, Geometric* p2);
     int size() const;
     void clear();
     
