@@ -88,26 +88,21 @@ Geometric* Particles::mouseSelect(double mouseX, double mouseY)
 
 void Particle::ExcertForce(const Vector3d &force)
 {
-    if (force[0] != 0 || force[1] != 0 || force[2] != 0)
-    {
-        int t = 0;
-        t = t + 1;
-    }
-    f += force;
+    if (!nailed)
+        f += force;
 }
 
 void Particle::ExcertForceField(Vector3d (*forcefunc)(Geometric*))
 {
-    f += forcefunc(this);
-    if (f[0] != 0 || f[1] != 0 || f[2] != 0)
-    {
-        int t = 0;
-        t = t + 1;
-    }
+    if (!nailed)
+        f += forcefunc(this);
 }
 
 void Particle::Display()
 {
+    if (nailed)
+        glColor3f(0.0f, 0.0f, 1.0f);
+    else
     if (selected)
         glColor3f(1.0f, 0.0f, 1.0f);
     else

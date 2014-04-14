@@ -8,12 +8,15 @@ Press 'WSADQE' to rotate camera in course level.
 
 Press 'rf' and 'RF' to move camera forward or backward.
 
-Use mouse click to select particle. Drag the particle to exert force.
+Use left mouse click to select particle. Drag the particle to exert force.
 When the mouse is released, the external force given by user is disappeared.
+
+Use right mouse click to nail particle.
 
 Display:
 
 Green sphere --> Particle
+Blue sphere  --> Nailed particle
 Pink sphere  --> Selected particle
 Golden line  --> Spring
 Red line     --> External force

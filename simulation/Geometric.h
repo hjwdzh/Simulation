@@ -18,14 +18,13 @@ public:
     Geometric();
 
     virtual void setSelected(bool selected);
+    virtual void setNailed();
     virtual void setExtForce(const Vector3d& ext);
     virtual void clearForce();
     virtual void setUserForce(const Vector3d& v);
     
-
-    
     double mass;
-    bool selected;
+    bool selected, nailed;
     Vector3d x, v, f, extForce, userForce;
 
     virtual void ExcertForce(const Vector3d& force) = 0;

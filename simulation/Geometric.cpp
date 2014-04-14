@@ -9,7 +9,7 @@
 #include "Geometric.h"
 
 Geometric::Geometric()
-: selected(false)
+: selected(false), nailed(false)
 {}
 
 void Geometric::setExtForce(const Vector3d &ext)
@@ -19,12 +19,24 @@ void Geometric::setExtForce(const Vector3d &ext)
 
 void Geometric::clearForce()
 {
-    f = extForce + userForce;
+    if (nailed)
+        f = Vector3d();
+    else
+        f = extForce + userForce;
 }
 
 void Geometric::setSelected(bool _sel)
 {
     selected = _sel;
+}
+
+void Geometric::setNailed()
+{
+    nailed = !nailed;
+    if (nailed)
+    {
+        v = Vector3d();
+    }
 }
 
 void Geometric::setUserForce(const Vector3d& v)

@@ -78,28 +78,32 @@ void KeyboardFunc(unsigned char key, int x, int y)
 // 响应鼠标按下与释放事件
 void MouseFunc(int button, int state, int x, int y)
 {
-    if (button == GLUT_LEFT_BUTTON)
+    if (state == 0)
     {
-        if (state == 0)
+        g_mouseX = x;
+        g_mouseY = y;
+        double mouseX = 2 * (double)x / g_WindowWidth - 1;
+        double mouseY = 2 * (double)(g_WindowHeight - y) / g_WindowHeight - 1;
+        g_selectedObject = g_sys->mouseSelect(mouseX * g_right, mouseY * g_top);
+        if (button == GLUT_RIGHT_BUTTON)
         {
-            g_mouseX = x;
-            g_mouseY = y;
-            double mouseX = 2 * (double)x / g_WindowWidth - 1;
-            double mouseY = 2 * (double)(g_WindowHeight - y) / g_WindowHeight - 1;
-            g_mouseState = 1;
-            g_selectedObject = g_sys->mouseSelect(mouseX * g_right, mouseY * g_top);
+            g_selectedObject->setNailed();
         }
         else
         {
-            if (g_selectedObject)
-            {
-                g_selectedObject->setUserForce(Vector3d());
-                g_selectedObject->setSelected(false);
-                g_selectedObject = 0;
-            }
-            g_mouseState = 0;
-            g_mouseState = 0;
+            g_mouseState = 1;
         }
+    }
+    else
+    {
+        if (g_selectedObject)
+        {
+            g_selectedObject->setUserForce(Vector3d());
+            g_selectedObject->setSelected(false);
+            g_selectedObject = 0;
+        }
+        g_mouseState = 0;
+        g_mouseState = 0;
     }
 }
 

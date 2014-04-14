@@ -15,6 +15,9 @@
 
 class Plane : public Geometric
 {
+    
+private:
+    Vector3d p;
 };
 
 #endif /* defined(__simulation__Plane__) */
