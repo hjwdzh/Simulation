@@ -74,32 +74,40 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bound.cpp" />
+    <ClCompile Include="Bounds.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="control.cpp" />
     <ClCompile Include="display.cpp" />
     <ClCompile Include="ForceField.cpp" />
     <ClCompile Include="Geometric.cpp" />
+    <ClCompile Include="Geometrics.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Particles.cpp" />
+    <ClCompile Include="Particle.cpp" />
     <ClCompile Include="Plane.cpp" />
     <ClCompile Include="scene.cpp" />
     <ClCompile Include="Solver.cpp" />
+    <ClCompile Include="Spring.cpp" />
     <ClCompile Include="Springs.cpp" />
     <ClCompile Include="SysDynPtc.cpp" />
     <ClCompile Include="SystemPhy.cpp" />
     <ClCompile Include="vmath.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bound.h" />
+    <ClInclude Include="Bounds.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="ForceField.h" />
     <ClInclude Include="Geometric.h" />
+    <ClInclude Include="Geometrics.h" />
     <ClInclude Include="GL.H" />
     <ClInclude Include="GLU.H" />
     <ClInclude Include="glut.h" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="Particles.h" />
+    <ClInclude Include="Particle.h" />
     <ClInclude Include="Plane.h" />
     <ClInclude Include="Solver.h" />
+    <ClInclude Include="Spring.h" />
     <ClInclude Include="Springs.h" />
     <ClInclude Include="SysDynPtc.h" />
     <ClInclude Include="SystemPhy.h" />
