@@ -51,6 +51,7 @@ int g_WindowHeight = 384;
 double g_d = 1.0;
 SysDynPtc* g_sys = 0;
 Camera* g_camera = 0;
+MatEngine* g_engine = 0;
 
 const char* g_WindowTitle = "Simulation Demo";
 

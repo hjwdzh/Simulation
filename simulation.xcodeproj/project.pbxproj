@@ -17,6 +17,11 @@
 		208B736518FC4A6C001A7521 /* Geometrics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 208B736318FC4A6C001A7521 /* Geometrics.cpp */; };
 		208B736818FC5286001A7521 /* Spring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 208B736618FC5286001A7521 /* Spring.cpp */; };
 		208B736B18FC536A001A7521 /* Bounds.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 208B736918FC536A001A7521 /* Bounds.cpp */; };
+		208E909918FD78AC00E42BC1 /* libeng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 208E909818FD78AC00E42BC1 /* libeng.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
+		208E909B18FD78C500E42BC1 /* libmx.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 208E909A18FD78C500E42BC1 /* libmx.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
+		208E909D18FD78D800E42BC1 /* libut.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 208E909C18FD78D800E42BC1 /* libut.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
+		208E909F18FD78F000E42BC1 /* libmat.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 208E909E18FD78F000E42BC1 /* libmat.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
+		208E90A218FD7A3800E42BC1 /* MatEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 208E90A018FD7A3800E42BC1 /* MatEngine.cpp */; };
 		20CF705818FA4DA1009417A5 /* simulation.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20CF705718FA4DA1009417A5 /* simulation.1 */; };
 		20CF707A18FA513A009417A5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CF707918FA513A009417A5 /* OpenGL.framework */; };
 		20CF707C18FA5141009417A5 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CF707B18FA5141009417A5 /* GLUT.framework */; };
@@ -64,6 +69,12 @@
 		208B736718FC5286001A7521 /* Spring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spring.h; sourceTree = "<group>"; };
 		208B736918FC536A001A7521 /* Bounds.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bounds.cpp; sourceTree = "<group>"; };
 		208B736A18FC536A001A7521 /* Bounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bounds.h; sourceTree = "<group>"; };
+		208E909818FD78AC00E42BC1 /* libeng.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libeng.dylib; path = ../../../../Applications/MATLAB_R2012b.app/bin/maci64/libeng.dylib; sourceTree = "<group>"; };
+		208E909A18FD78C500E42BC1 /* libmx.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmx.dylib; path = ../../../../Applications/MATLAB_R2012b.app/bin/maci64/libmx.dylib; sourceTree = "<group>"; };
+		208E909C18FD78D800E42BC1 /* libut.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libut.dylib; path = ../../../../Applications/MATLAB_R2012b.app/bin/maci64/libut.dylib; sourceTree = "<group>"; };
+		208E909E18FD78F000E42BC1 /* libmat.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmat.dylib; path = ../../../../Applications/MATLAB_R2012b.app/bin/maci64/libmat.dylib; sourceTree = "<group>"; };
+		208E90A018FD7A3800E42BC1 /* MatEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MatEngine.cpp; sourceTree = "<group>"; };
+		208E90A118FD7A3800E42BC1 /* MatEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatEngine.h; sourceTree = "<group>"; };
 		20CF705218FA4DA1009417A5 /* simulation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = simulation; sourceTree = BUILT_PRODUCTS_DIR; };
 		20CF705718FA4DA1009417A5 /* simulation.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = simulation.1; sourceTree = "<group>"; };
 		20CF707918FA513A009417A5 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -88,6 +99,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				208E909F18FD78F000E42BC1 /* libmat.dylib in Frameworks */,
+				208E909D18FD78D800E42BC1 /* libut.dylib in Frameworks */,
+				208E909B18FD78C500E42BC1 /* libmx.dylib in Frameworks */,
+				208E909918FD78AC00E42BC1 /* libeng.dylib in Frameworks */,
 				20CF707C18FA5141009417A5 /* GLUT.framework in Frameworks */,
 				20CF707A18FA513A009417A5 /* OpenGL.framework in Frameworks */,
 			);
@@ -116,6 +131,10 @@
 		20CF704918FA4DA1009417A5 = {
 			isa = PBXGroup;
 			children = (
+				208E909E18FD78F000E42BC1 /* libmat.dylib */,
+				208E909C18FD78D800E42BC1 /* libut.dylib */,
+				208E909A18FD78C500E42BC1 /* libmx.dylib */,
+				208E909818FD78AC00E42BC1 /* libeng.dylib */,
 				20CF707B18FA5141009417A5 /* GLUT.framework */,
 				20CF707918FA513A009417A5 /* OpenGL.framework */,
 				20CF705418FA4DA1009417A5 /* simulation */,
@@ -189,6 +208,8 @@
 				206C5D8618FBD0B5008726B0 /* vmath.h */,
 				206C5D8818FBFEC5008726B0 /* Camera.cpp */,
 				206C5D8918FBFEC5008726B0 /* Camera.h */,
+				208E90A018FD7A3800E42BC1 /* MatEngine.cpp */,
+				208E90A118FD7A3800E42BC1 /* MatEngine.h */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -260,6 +281,7 @@
 				20F69E1618FAD2ED007273C3 /* scene.cpp in Sources */,
 				20309CB618FA6E76008408CF /* Particle.cpp in Sources */,
 				208B736118FC3ECE001A7521 /* Bound.cpp in Sources */,
+				208E90A218FD7A3800E42BC1 /* MatEngine.cpp in Sources */,
 				20309CB018FA6A99008408CF /* SystemPhy.cpp in Sources */,
 				20F69E0918FA915D007273C3 /* ForceField.cpp in Sources */,
 				20F69E0D18FAA04C007273C3 /* Solver.cpp in Sources */,
@@ -365,9 +387,23 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = /opt/local/lib;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/opt/local/include,
+					/Applications/MATLAB_R2012b.app/extern/include/,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/opt/local/lib,
+					/Applications/MATLAB_R2012b.app/bin/maci64,
+					"$(SYSTEM_APPS_DIR)/MATLAB_R2012b.app/bin/maci64",
+				);
+				OTHER_LDFLAGS = (
+					"-leng",
+					"-lmx",
+					"-lmat",
+					"-lut",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -378,9 +414,23 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = /opt/local/lib;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/opt/local/include,
+					/Applications/MATLAB_R2012b.app/extern/include/,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/opt/local/lib,
+					/Applications/MATLAB_R2012b.app/bin/maci64,
+					"$(SYSTEM_APPS_DIR)/MATLAB_R2012b.app/bin/maci64",
+				);
+				OTHER_LDFLAGS = (
+					"-leng",
+					"-lmx",
+					"-lmat",
+					"-lut",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

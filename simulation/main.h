@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 skyer. All rights reserved.
 //
 
-#define _WINDOWS_PLATFORM_
+//#define _WINDOWS_PLATFORM_
 
 #ifndef __simulation__main__
 #define __simulation__main__
@@ -27,6 +27,7 @@ using namespace std;
 
 #include "SysDynPtc.h"
 #include "Camera.h"
+#include "MatEngine.h"
 using namespace std;
 
 extern SysDynPtc* g_sys;
@@ -34,6 +35,7 @@ extern Camera* g_camera;
 extern int g_WindowWidth;
 extern int g_WindowHeight;
 extern double g_top, g_right, g_d;
+extern MatEngine* g_engine;
 void Initialize();
 void Uninitialize();
 

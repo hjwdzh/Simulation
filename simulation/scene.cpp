@@ -1,5 +1,7 @@
 #include "main.h"
 #include "ForceField.h"
+#include <engine.h>
+
 void SetParameters()
 {
     ForceField::k_drag = 1.8;
@@ -9,11 +11,11 @@ void SetParameters()
 // 初始化应用程序
 void Initialize()
 {
+    
     g_sys = new SysDynPtc();
-    
     g_sys->Initialize();
-    
     g_camera = new Camera();
+    g_engine = new MatEngine();
     
     SetParameters();
     // 设置清屏颜色
@@ -34,4 +36,5 @@ void Uninitialize()
     // nothing
     delete g_sys;
     delete g_camera;
+    delete g_engine;
 }
