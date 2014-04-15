@@ -92,11 +92,6 @@ int SysDynPtc::getDim()
     return 6 * m_objects.size();
 }
 
-void SysDynPtc::clearForce()
-{
-    m_objects.clearForce();
-}
-
 double* SysDynPtc::getState()
 {
     double *state = new double[6 * m_objects.size()];
@@ -136,8 +131,9 @@ void SysDynPtc::setState(double* state, double t)
 
 double* SysDynPtc::DerivEval(double* state, double t)
 {
-    clearForce();
+    m_objects.clearForce();
     ForceApply();
+    m_objects.contact_detection(m_bounds);
     double *delta = new double[6 * m_objects.size()];
     double *st = delta;
     for (vector<Geometric*>::iterator it = m_objects.vp.begin();

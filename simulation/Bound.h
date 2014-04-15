@@ -12,6 +12,9 @@
 #include <iostream>
 #include "Geometric.h"
 
+
+#define CONTACT_THRESHOLD 1.0
+
 class Bound
 {
 public:
@@ -19,6 +22,7 @@ public:
     virtual ~Bound() = 0;
     virtual void setKr(double _kr);
     virtual bool collid_detection(Geometric* object) = 0;
+    virtual bool contact_detection(Geometric* object) = 0;
     virtual void Display() = 0;
 protected:
     double kr;

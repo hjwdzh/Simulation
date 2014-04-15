@@ -26,6 +26,7 @@ public:
     
     Geometric* mouseSelect(double mouseX, double mouseY);
     void collid_detection(Bounds& b);
+    void contact_detection(Bounds& b);
     void addElement(Geometric* object);
     
     void clearForce();

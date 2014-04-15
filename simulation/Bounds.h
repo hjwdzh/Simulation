@@ -23,6 +23,7 @@ public:
     void addElement(Bound* b);
     void Display();
     bool collid_detection(Geometric* object);
+    bool contact_detection(Geometric* object);
     vector<Bound*> vp;
 };
 

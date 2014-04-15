@@ -29,12 +29,32 @@ bool Plane::collid_detection(Geometric* object)
     if (ptc)
     {
         double dis = (ptc->x - P).dotProduct(N);
-        if (dis < EPSILON && N.dotProduct(ptc->v) < 0)
+        double collid = N.dotProduct(ptc->v) / ptc->v.length();
+        if (dis < EPSILON && collid < -EPSILON)
         {
             Vector3d vn = N * N.dotProduct(ptc->v);
             Vector3d vt = ptc->v - vn;
             ptc->v = vt - vn * (kr * ptc->kr);
             ptc->x = ptc->x - N * dis;
+        }
+    }
+    return false;
+}
+
+bool Plane::contact_detection(Geometric* object)
+{
+    Particle* ptc = dynamic_cast<Particle*>(object);
+    if (ptc)
+    {
+        double dis = (ptc->x - P).dotProduct(N);
+        double collid = N.dotProduct(ptc->v);
+        if (dis < EPSILON && abs(collid) < CONTACT_THRESHOLD)
+        {
+            ptc->x -= N * dis;
+            ptc->v -= N * collid;
+            double fn = N.dotProduct(ptc->f);
+            if (fn < 0)
+                object->ExcertForce(N * -fn);
         }
     }
     return false;

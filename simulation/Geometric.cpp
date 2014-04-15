@@ -47,6 +47,11 @@ void Geometric::setUserForce(const Vector3d& v)
     userForce = v;
 }
 
+void Geometric::addExtForce(const Vector3d& ext)
+{
+    extForce += ext;
+}
+
 void Geometric::setKr(double _kr)
 {
     kr = _kr;

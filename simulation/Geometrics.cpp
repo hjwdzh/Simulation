@@ -81,3 +81,10 @@ void Geometrics::collid_detection(Bounds& b)
          it != vp.end(); ++it)
         b.collid_detection((*it));
 }
+
+void Geometrics::contact_detection(Bounds& b)
+{
+    for (vector<Geometric*>::iterator it = vp.begin();
+         it != vp.end(); ++it)
+        b.contact_detection((*it));
+}

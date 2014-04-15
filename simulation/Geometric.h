@@ -21,6 +21,7 @@ public:
     virtual void setSelected(bool selected);
     virtual void setNailed();
     virtual void setExtForce(const Vector3d& ext);
+    virtual void addExtForce(const Vector3d& ext);
     virtual void clearForce();
     virtual void setUserForce(const Vector3d& v);
     virtual void setKr(double _kr);

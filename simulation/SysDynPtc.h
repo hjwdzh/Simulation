@@ -31,7 +31,6 @@ public:
     double getTime();
 
 protected:
-    virtual void clearForce();
     virtual void ForceApply();
     Springs m_springs;
     Geometrics m_objects;

@@ -41,6 +41,17 @@ bool Bounds::collid_detection(Geometric* object)
     return t;
 }
 
+bool Bounds::contact_detection(Geometric* object)
+{
+    bool t = false;
+    for (vector<Bound*>::iterator it = vp.begin();
+         it != vp.end(); ++it)
+    {
+        t |= (*it)->contact_detection(object);
+    }
+    return t;
+}
+
 void Bounds::Display()
 {
     for (vector<Bound*>::iterator it = vp.begin();
